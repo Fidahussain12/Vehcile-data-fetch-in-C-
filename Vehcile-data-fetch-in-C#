@@ -1,0 +1,52 @@
+using System; 
+
+// parent , seniour , base class
+class Vehicle
+{
+    // variables
+    public string name; 
+    public string color; 
+
+    // contructor
+    public Vehicle(string name , string color)
+    {
+        this.name = name;
+        this.color = color;
+    }
+    
+    // method
+    public void getparent()
+    {
+        Console.WriteLine("I am Vehicle Class");
+    }
+    
+}
+// sub , child , juniour , inherited
+class Mehran: Vehicle
+{
+
+    public Mehran() : base("Mehran VXR suzuki", "green")
+    {
+
+    }
+
+    public void getname()
+
+    {
+        Console.WriteLine("Name:   "+ name);
+    }
+    public void getcolor()
+    {
+        Console.WriteLine("Color: " + color);
+    }
+}
+class Program
+{
+    public static void Main()
+    {
+        Mehran  m = new Mehran();
+        m.getparent();
+        m.getname();
+        m.getcolor();
+    }
+}
